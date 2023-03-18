@@ -26,8 +26,8 @@
             <Font name="System Bold" size="17.0" />
          </font>
       </Button>
-      <TextField fx:id="destinationCityText" alignment="CENTER" layoutX="368.0" layoutY="174.0" prefHeight="25.0" prefWidth="188.0" AnchorPane.rightAnchor="44.0" AnchorPane.topAnchor="174.0" />
-      <TextField fx:id="initialCityText" alignment="CENTER" layoutX="38.0" layoutY="174.0" prefHeight="25.0" prefWidth="188.0" AnchorPane.leftAnchor="38.0" AnchorPane.topAnchor="174.0" />
+      <TextField fx:id="purposeCityText" alignment="CENTER" layoutX="368.0" layoutY="174.0" prefHeight="25.0" prefWidth="188.0" AnchorPane.rightAnchor="44.0" AnchorPane.topAnchor="174.0" />
+      <TextField fx:id="myCityText" alignment="CENTER" layoutX="38.0" layoutY="174.0" prefHeight="25.0" prefWidth="188.0" AnchorPane.leftAnchor="38.0" AnchorPane.topAnchor="174.0" />
       <Label fx:id="errorLabel" layoutX="62.0" layoutY="289.0" prefHeight="17.0" prefWidth="463.0" textAlignment="CENTER" />
    </children>
 </AnchorPane>

@@ -6,12 +6,18 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import pl.nataliamichalowska.controller.BaseController;
 import pl.nataliamichalowska.controller.MainPageController;
+import pl.nataliamichalowska.controller.WeatherDisplayController;
 
 import java.io.IOException;
 
 public class ViewFactory {
     public void showMainPage(){
         BaseController controller = new MainPageController (this, "MainPageView.fxml");
+        initializeStage(controller);
+    }
+
+    public void showWeatherDisplay(){
+        BaseController controller = new WeatherDisplayController(this, "WeatherDisplayView.fxml");
         initializeStage(controller);
     }
 
