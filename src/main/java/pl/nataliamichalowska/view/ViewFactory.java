@@ -7,6 +7,7 @@ import javafx.stage.Stage;
 import pl.nataliamichalowska.controller.BaseController;
 import pl.nataliamichalowska.controller.MainPageController;
 import pl.nataliamichalowska.controller.WeatherDisplayController;
+import pl.nataliamichalowska.model.Weather;
 
 import java.io.IOException;
 

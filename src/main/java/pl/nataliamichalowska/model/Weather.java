@@ -1,12 +1,16 @@
 package pl.nataliamichalowska.model;
 
+import java.util.ArrayList;
+
 public class Weather {
     private CityData cityData;
     private WeatherData weatherData;
 
-    public Weather(CityData cityData, WeatherData weatherData) {
+    private ArrayList<ForecastData> forecastData;
+    public Weather(CityData cityData, WeatherData weatherData, ArrayList<ForecastData> forecastData) {
         this.cityData = cityData;
         this.weatherData = weatherData;
+        this.forecastData = forecastData;
     }
 
     public CityData getCityData() {
@@ -15,5 +19,9 @@ public class Weather {
 
     public WeatherData getWeatherData() {
         return weatherData;
+    }
+
+    public ArrayList<ForecastData> getForecastData() {
+        return forecastData;
     }
 }

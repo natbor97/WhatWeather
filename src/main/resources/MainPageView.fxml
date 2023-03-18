@@ -6,7 +6,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="321.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Label layoutX="407.0" layoutY="146.0" text="MIASTO DOCELOWE" AnchorPane.rightAnchor="83.0" AnchorPane.topAnchor="146.0" />
@@ -16,9 +15,9 @@
             <Font name="System Bold" size="33.0" />
          </font>
       </Label>
-      <Label layoutX="90.0" layoutY="82.0" text="Sprawdź pogodę w mieście, do którego planujesz wyruszyć:" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="90.0" AnchorPane.topAnchor="82.0">
+      <Label alignment="CENTER" layoutX="4.0" layoutY="82.0" prefHeight="19.0" prefWidth="594.0" text="Porównaj pogodę w twoim mieście i mieście, do którego planujesz się udać:" textAlignment="CENTER" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="82.0">
          <font>
-            <Font size="16.0" />
+            <Font size="15.0" />
          </font>
       </Label>
       <Button layoutX="239.0" layoutY="223.0" mnemonicParsing="false" onAction="#checkButton" prefHeight="60.0" prefWidth="121.0" text="SPRAWDŹ" AnchorPane.leftAnchor="239.0" AnchorPane.rightAnchor="239.66666666666669">
