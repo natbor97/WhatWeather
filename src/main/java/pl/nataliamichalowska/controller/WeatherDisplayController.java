@@ -5,8 +5,10 @@ import javafx.scene.Group;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.VBox;
+import pl.nataliamichalowska.model.Weather;
+import pl.nataliamichalowska.view.ViewFactory;
 
-public class WeatherDisplayController {
+public class WeatherDisplayController extends BaseController {
     @FXML
     private Label dateToday1;
 
@@ -54,4 +56,11 @@ public class WeatherDisplayController {
 
     @FXML
     private Label tempPurposeCityToday;
+
+
+
+    public WeatherDisplayController(ViewFactory viewFactory, String fxmlName) {
+        super(viewFactory, fxmlName);
+
+    }
 }

@@ -8,26 +8,31 @@ import pl.nataliamichalowska.view.ViewFactory;
 public class MainPageController extends BaseController {
 
     @FXML
-    private TextField destinationCityText;
+    private TextField purposeCityText;
 
     @FXML
     private Label errorLabel;
 
     @FXML
-    private TextField initialCityText;
+    private TextField myCityText;
 
     @FXML
     void checkButton() {
-        if((initialCityText.getText().isEmpty()) && (destinationCityText.getText().isEmpty())){
+        if((myCityText.getText().isEmpty()) && (purposeCityText.getText().isEmpty())){
             errorLabel.setText("Podaj nazwy miast!");
-        } else if (initialCityText.getText().isEmpty()) {
+        } else if (myCityText.getText().isEmpty()) {
             errorLabel.setText("Podaj nazwę swojego miasta!");
-        } else if (destinationCityText.getText().isEmpty()) {
+        } else if (purposeCityText.getText().isEmpty()) {
             errorLabel.setText("Podaj nazwę miasta docelowego!");
         }
         else {
-            System.out.println("Its ok!");
+            displayWeather();
         }
+    }
+
+    private void displayWeather(){
+        ViewFactory viewFactory = new ViewFactory();
+        viewFactory.showWeatherDisplay();
     }
 
     public MainPageController(ViewFactory viewFactory, String fxmlName) {

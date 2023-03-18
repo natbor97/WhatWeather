@@ -48,7 +48,7 @@
                </font>
             </Label>
             <ImageView fx:id="imagePurposeCityToday" fitHeight="76.0" fitWidth="83.0" layoutY="77.0" pickOnBounds="true" preserveRatio="true" />
-            <Label fx:id="dateToday2" layoutX="151.0" layoutY="28.0" prefHeight="27.0" prefWidth="188.0" text="enter date">
+            <Label fx:id="dateToday2" layoutX="151.0" layoutY="28.0" prefHeight="27.0" prefWidth="188.0" text="dzisiejsza data">
                <font>
                   <Font name="Copperplate Gothic Light" size="17.0" />
                </font>
@@ -78,7 +78,7 @@
                </font>
             </Label>
             <ImageView fx:id="imageMyCityToday" fitHeight="76.0" fitWidth="83.0" layoutY="77.0" pickOnBounds="true" preserveRatio="true" />
-            <Label fx:id="dateToday1" layoutX="133.0" layoutY="29.0" prefHeight="27.0" prefWidth="188.0" text="enter date">
+            <Label fx:id="dateToday1" layoutX="133.0" layoutY="29.0" prefHeight="27.0" prefWidth="188.0" text="dzisiejsza data">
                <font>
                   <Font name="Copperplate Gothic Light" size="17.0" />
                </font>
