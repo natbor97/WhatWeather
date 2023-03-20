@@ -4,8 +4,10 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import pl.nataliamichalowska.model.RealWeatherClient;
 import pl.nataliamichalowska.model.Weather;
 import pl.nataliamichalowska.model.WeatherService;
+import pl.nataliamichalowska.view.Messages;
 import pl.nataliamichalowska.view.ViewFactory;
 
 import java.io.IOException;
@@ -13,42 +15,54 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class MainPageController extends BaseController implements Initializable {
-
     @FXML
     private TextField purposeCityText;
-
+    @FXML
+    private TextField myCityText;
     @FXML
     private Label errorLabel;
 
-    @FXML
-    private TextField myCityText;
+    Messages messages = new Messages();
 
-    private final WeatherService weatherService = new WeatherService();
+    public MainPageController(ViewFactory viewFactory, String fxmlName) {
+        super(viewFactory, fxmlName);
+    }
+    private final WeatherService weatherService = new WeatherService(new RealWeatherClient());
 
     @FXML
     void checkButton() throws IOException {
         if((myCityText.getText().isEmpty()) && (purposeCityText.getText().isEmpty())){
-            errorLabel.setText("Podaj nazwy miast!");
+            errorLabel.setText(messages.getEmptyLocations());
         } else if (myCityText.getText().isEmpty()) {
-            errorLabel.setText("Podaj nazwę swojego miasta!");
+            errorLabel.setText(messages.getEmptyYourLocation());
         } else if (purposeCityText.getText().isEmpty()) {
-            errorLabel.setText("Podaj nazwę miasta docelowego!");
+            errorLabel.setText(messages.getEmptyPurposeLocation());
         }
         else {
-            getWeather();
+            getWeatherForCities();
         }
     }
 
-    private void getWeather() throws IOException {
-        String myCity = myCityText.getText();
-        String purposeCity = purposeCityText.getText();
-        ViewFactory viewFactory = new ViewFactory();
-        viewFactory.showWeatherDisplay();
+    private void getWeatherForCities() throws IOException {
+        String myCityName = myCityText.getText();
+        String purposeCityName = purposeCityText.getText();
 
+        Weather myCityWeather = weatherService.getWeather(myCityName);
+        Weather purposeCityWeather = weatherService.getWeather(purposeCityName);
+
+        if ((myCityWeather.getCityData().name == null)&&(purposeCityWeather.getCityData().name == null)||
+                (myCityWeather.getCityData().name == null) ||
+                (purposeCityWeather.getCityData().name == null)) {
+            errorLabel.setText(messages.getNoCityInDatabase());
+        }
+        else {
+            displayWeather(myCityWeather, purposeCityWeather);
+        }
     }
 
-    public MainPageController(ViewFactory viewFactory, String fxmlName) {
-        super(viewFactory, fxmlName);
+    private void displayWeather(Weather myCityWeather, Weather purposeCityWeather){
+        ViewFactory viewFactory = new ViewFactory();
+        viewFactory.showWeatherDisplay(myCityWeather, purposeCityWeather);
     }
 
     @Override

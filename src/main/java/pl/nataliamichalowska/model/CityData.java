@@ -7,7 +7,6 @@ public class CityData {
     public String country;
     public String state;
 
-    public CityData(){};
     public CityData(String name, double lat, double lon, String country, String state) {
         this.name = name;
         this.lat = lat;
@@ -15,4 +14,6 @@ public class CityData {
         this.country = country;
         this.state = state;
     }
+
+    public CityData(){};
 }

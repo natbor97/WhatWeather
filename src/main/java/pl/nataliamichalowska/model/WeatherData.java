@@ -1,16 +1,14 @@
 package pl.nataliamichalowska.model;
 
 public class WeatherData {
-    public String myCity;
-    public String purposeCity;
+    public String main;
     public double temp;
     public double pressure;
     public String icon;
 
     public WeatherData(){};
-    public WeatherData(String myCity, String purposeCity, double temp, double pressure, String icon) {
-        this.myCity = myCity;
-        this.purposeCity = purposeCity;
+    public WeatherData(String main, double temp, double pressure, String icon) {
+        this.main = main;
         this.temp = temp;
         this.pressure = pressure;
         this.icon = icon;
