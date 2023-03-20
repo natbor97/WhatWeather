@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="321.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="321.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Label layoutX="407.0" layoutY="146.0" text="MIASTO DOCELOWE" AnchorPane.rightAnchor="83.0" AnchorPane.topAnchor="146.0" />
       <Label layoutX="90.0" layoutY="146.0" text="TWOJE MIASTO" AnchorPane.leftAnchor="90.0" AnchorPane.topAnchor="146.0" />
@@ -27,6 +27,6 @@
       </Button>
       <TextField fx:id="purposeCityText" alignment="CENTER" layoutX="368.0" layoutY="174.0" prefHeight="25.0" prefWidth="188.0" AnchorPane.rightAnchor="44.0" AnchorPane.topAnchor="174.0" />
       <TextField fx:id="myCityText" alignment="CENTER" layoutX="38.0" layoutY="174.0" prefHeight="25.0" prefWidth="188.0" AnchorPane.leftAnchor="38.0" AnchorPane.topAnchor="174.0" />
-      <Label fx:id="errorLabel" layoutX="62.0" layoutY="289.0" prefHeight="17.0" prefWidth="463.0" textAlignment="CENTER" />
+      <Label fx:id="errorLabel" alignment="CENTER" layoutX="62.0" layoutY="289.0" prefHeight="17.0" prefWidth="463.0" textAlignment="CENTER" textFill="#e90c0c" />
    </children>
 </AnchorPane>

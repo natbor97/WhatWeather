@@ -5,7 +5,6 @@ import java.util.ArrayList;
 public class Weather {
     private CityData cityData;
     private WeatherData weatherData;
-
     private ArrayList<ForecastData> forecastData;
     public Weather(CityData cityData, WeatherData weatherData, ArrayList<ForecastData> forecastData) {
         this.cityData = cityData;

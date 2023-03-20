@@ -8,7 +8,7 @@ public class BaseController {
 
     public BaseController(ViewFactory viewFactory, String fxmlName) {
         this.viewFactory = viewFactory;
-        this.fxmlName = "/"+fxmlName;
+        this.fxmlName = fxmlName;
     }
 
     public String getFxmlName() {

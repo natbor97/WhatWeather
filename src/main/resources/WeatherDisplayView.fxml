@@ -7,46 +7,46 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="908.0" prefWidth="612.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane focusTraversable="true" mouseTransparent="true" pickOnBounds="false" prefHeight="811.0" prefWidth="623.0" style="-fx-background-color: #a8e3e7;" xmlns="http://javafx.com/javafx/11" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Label layoutX="266.0" layoutY="14.0" text="POGODA" textFill="#d01d1d">
+      <Label alignment="CENTER" text="POGODA" textFill="#d01d1d" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <font>
             <Font name="System Bold" size="29.0" />
          </font>
       </Label>
-      <Group fx:id="groupMyCityToday" layoutX="315.0" layoutY="55.0">
+      <Group fx:id="groupMyCityToday" layoutX="311.0" layoutY="55.0" AnchorPane.rightAnchor="-6.0" AnchorPane.topAnchor="111.0">
          <children>
-            <Label fx:id="descriptionPurposeCityToday" layoutX="-5.0" layoutY="56.0" prefHeight="27.0" prefWidth="312.0">
+            <Label fx:id="purposeCityNameExtended" alignment="CENTER" contentDisplay="CENTER" layoutX="-5.0" layoutY="56.0" prefHeight="27.0" prefWidth="312.0">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
             </Label>
-            <Label fx:id="tempPurposeCityToday" layoutX="86.0" layoutY="77.0" prefHeight="27.0" prefWidth="224.0" text="temperatura:">
+            <Label fx:id="tempPurposeCityToday" layoutX="86.0" layoutY="91.0" prefHeight="27.0" prefWidth="220.0">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
-            <Label fx:id="pressurePurposeCityToday" layoutX="86.0" layoutY="101.0" prefHeight="27.0" prefWidth="224.0" text="ciśnienie:">
+            <Label fx:id="pressurePurposeCityToday" layoutX="86.0" layoutY="115.0" prefHeight="27.0" prefWidth="220.0">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
-            <ImageView fx:id="imagePurposeCityToday" fitHeight="76.0" fitWidth="83.0" layoutY="77.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="imagePurposeCityToday" fitHeight="76.0" fitWidth="83.0" layoutX="-5.0" layoutY="80.0" pickOnBounds="true" preserveRatio="true" />
          </children>
       </Group>
-      <Group fx:id="groupPurposeCityToday" layoutY="55.0">
+      <Group fx:id="groupPurposeCityToday" layoutX="-6.0" layoutY="56.0" AnchorPane.leftAnchor="-6.0" AnchorPane.topAnchor="111.0">
          <children>
-            <Label fx:id="descriptionMyCityToday" layoutY="55.0" prefHeight="27.0" prefWidth="312.0">
+            <Label fx:id="myCityNameExtended" alignment="CENTER" contentDisplay="CENTER" layoutY="55.0" prefHeight="27.0" prefWidth="312.0">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
             </Label>
-            <Label fx:id="tempMyCityToday" layoutX="86.0" layoutY="77.0" prefHeight="27.0" prefWidth="224.0" text="temperatura:">
+            <Label fx:id="tempMyCityToday" layoutX="86.0" layoutY="91.0" prefHeight="27.0" prefWidth="219.0">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
-            <Label fx:id="pressureMyCityToday" layoutX="86.0" layoutY="101.0" prefHeight="27.0" prefWidth="224.0" text="ciśnienie:">
+            <Label fx:id="pressureMyCityToday" layoutX="86.0" layoutY="115.0" prefHeight="27.0" prefWidth="220.0">
                <font>
                   <Font size="18.0" />
                </font>
@@ -54,16 +54,11 @@
             <ImageView fx:id="imageMyCityToday" fitHeight="76.0" fitWidth="83.0" layoutY="77.0" pickOnBounds="true" preserveRatio="true" />
          </children>
       </Group>
-      <VBox fx:id="myCityForecastBox" layoutY="216.0" prefHeight="692.0" prefWidth="312.0" />
-      <VBox fx:id="purposeCityForecastBox" layoutX="312.0" layoutY="208.0" prefHeight="692.0" prefWidth="312.0" />
-      <Label layoutX="210.0" layoutY="57.0" prefHeight="27.0" prefWidth="81.0" text="DZISIAJ">
+      <VBox fx:id="myCityForecastBox" layoutX="-6.0" layoutY="216.0" prefHeight="613.0" prefWidth="312.0" AnchorPane.leftAnchor="-6.0" AnchorPane.topAnchor="216.0" />
+      <VBox fx:id="purposeCityForecastBox" layoutX="312.0" layoutY="216.0" prefHeight="613.0" prefWidth="312.0" AnchorPane.rightAnchor="-12.0" AnchorPane.topAnchor="216.0" />
+      <Label fx:id="dateToday" alignment="CENTER" contentDisplay="CENTER" layoutY="57.0" prefHeight="27.0" prefWidth="627.0" textAlignment="CENTER" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="57.0">
          <font>
-            <Font name="Copperplate Gothic Light" size="17.0" />
-         </font>
-      </Label>
-      <Label fx:id="dateToday" layoutX="328.0" layoutY="57.0" prefHeight="27.0" prefWidth="188.0">
-         <font>
-            <Font name="Copperplate Gothic Light" size="17.0" />
+            <Font name="Jokerman" size="17.0" />
          </font>
       </Label>
    </children>
